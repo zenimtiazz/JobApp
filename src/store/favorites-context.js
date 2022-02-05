@@ -3,9 +3,12 @@ import Favorites from "../pages/Favorites";
 
 const FavoritesContext = createContext({
     favorites :[],
-    totalFavorites :0
+    totalFavorites :0,
+    addFavorite : (favoriteMeetup)=>{},
+    removeFavorite :(meetupId)=>{},
+    itemIsFavorite :(meetupId)=>{}
 });
-function FavoritesContextProvider(props){
+export function FavoritesContextProvider(props){
     const[userFavorites,setUserFavorites]=useState([]);
     function addFavoriteHandler(favoriteMeetup){
  setUserFavorites((prevUserFavorites)=>{
@@ -23,9 +26,14 @@ return userFavorites.some(meetup=>meetup.id===meetupId);
  const context ={
      favorites : userFavorites,
      totalFavorites:userFavorites.length,
+     addFavorite: addFavoriteHandler,
+     removeFavorite : removeFavoriteHandler,
+     itemIsFavorite: itemFavoriteHandler
+
  };
 
     return <FavoritesContext.Provider value={context}>
     {props.chimdren}
     </FavoritesContext.Provider>
 }
+export default FavoritesContext;
