@@ -1,5 +1,5 @@
 import { Route, Switch } from 'react-router-dom';
-import MainNavigation from './layout/MainNavigation';
+import MainNavigation from './components/layout/MainNavigation';
 import AllMeetups from './pages/AllMeetups';
 import Favorites from './pages/Favorites';
 import NewMeetup from './pages/NewMeetup';
