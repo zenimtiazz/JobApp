@@ -55,7 +55,7 @@ const AllMeetups = () => {
     </section>
   }
   return (<section>
-     <h1>All meetups</h1>
+     <h1 align='center'>All meetups</h1>
      {/* <ul>
       {DUMMY_DATA.map((meetup)=>
       {return <li key={meetup.id}>{meetup.title}</li>})}
