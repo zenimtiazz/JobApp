@@ -22,7 +22,8 @@ const AllMeetups = () => {
   return (<section>
      <h1>All meetups</h1>
      <ul>
-      {DUMMY_DATA.map((meetup)=>{return <li key={meetup.id}>{meetup.title}</li>})}
+      {DUMMY_DATA.map((meetup)=>
+      {return <li key={meetup.id}>{meetup.title}</li>})}
      </ul>
   </section>)
 };
