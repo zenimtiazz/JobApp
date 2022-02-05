@@ -13,7 +13,9 @@ fetch('https://react-meetups-7d806-default-rtdb.firebaseio.com/meetups.json',
     'Content-Type':'applications/json'
   }
 }
-);
+).then(()=>{
+  history.replace('/');
+});
   }
   return (<section>
      <h1>  Add new meetup </h1>
