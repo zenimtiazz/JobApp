@@ -18,7 +18,7 @@ fetch('https://react-meetups-7d806-default-rtdb.firebaseio.com/meetups.json',
 });
   }
   return (<section>
-     <h1>  Add new meetup </h1>
+     <h1>  Add new job </h1>
      <NewMeetupForm onAddMeetup={addMeetupHandler}/>
   </section>)
 };
